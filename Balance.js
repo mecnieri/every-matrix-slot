@@ -3,7 +3,7 @@ import { PubSub } from './PubSub.js'
 export class Balance {
   constructor(container) {
     this.balance = 100
-    this.balanceText = new PIXI.Text(`Balance: ${this.balance}`, style)
+    this.balanceText = new PIXI.Text(`Balance: $${this.balance}`, style)
     this.balanceText.position.set(20, 320)
     container.addChild(this.balanceText)
 
@@ -23,7 +23,7 @@ export class Balance {
   }
 
   updateBalance = () => {
-    this.balanceText.text = `Balance: ${this.balance}`
+    this.balanceText.text = `Balance: $${this.balance}`
   }
 }
 
